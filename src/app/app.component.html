@@ -1,4 +1,11 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div class="container">
+
+  <app-navbar></app-navbar>
+
+  <main [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+    <router-outlet #o="outlet"></router-outlet>
+  </main>
+
+  <!-- <app-footer></app-footer> -->
+  <app-loader-spinner></app-loader-spinner>
+</div>
